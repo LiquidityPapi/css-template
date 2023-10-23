@@ -29,14 +29,38 @@ body {
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+header, footer {
+  height: 100px;
+  border: 2px solid black;
+  clear: both;
 }
 
-footer {
-
+section {
+  width: 20%;
+  height: 300px;
+  border: 2px solid black;
+  float: left;
 }
 
+.largeOne {
+  width: 40%;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    background-color: green;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  section {
+    background-color: blue;
+    width: 33.3333%;
+  }
+  .largeOne {
+    display: none;
+  }
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
